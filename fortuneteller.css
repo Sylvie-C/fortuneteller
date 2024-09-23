@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "euphoria";
+  src: url("./assets/fonts/euphoria.ttf");
+}
+
+body {
+  background-image: url("./assets/images/fortuneteller_bckgd_desktop.webp"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 0 auto; 
+  max-width: 1280px; 
+  height: 100vh;
+
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.ftContainer {  
+  border-radius: 24px; 
+  height: fit-content; 
+
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px; 
+}
+
+.ftResultBtn , .ftTextContainer {
+  font-family: "euphoria" , serif ; 
+  font-size: 26px;
+  color: white; 
+  background: rgba(25, 120, 120, 0.7) ; 
+  border-radius: 24px; 
+}
+
+.ftResultBtn {
+  padding: 8px; 
+  border: none; 
+
+  transition: box-shadow 0.3s ease-in-out , opacity 3s ; 
+}
+
+.ftResultBtn:hover , .ftReplayBtn:hover {
+  cursor: pointer; 
+  box-shadow: white 0 0 28px; 
+  border: solid white 1px; 
+} 
+
+.ftTextContainer {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px; 
+  margin: 10px;
+
+  width: 600px; 
+  height: 150px; 
+
+  transition: all 3s ; 
+}
+
+.ftTextContent {
+  text-align: center;
+
+  transition: opacity 3s ; 
+  transform-origin: center;
+}
+
+.hideBtn {
+  transform: scale(0); 
+}
+
+.showBtn {
+  transform: scale(1);
+}
+
+.ftReplayBtn {
+  transition: transform 1s ease-in-out 5s, box-shadow 0.3s ease-in-out , opacity 3s ; 
+}
+
+/* -------  MEDIA QUERIES  ------- */
+
+@media (max-width: 480px) {
+
+  body {
+    background: url("./assets/images/fortuneteller_bckgd_mobile.webp")
+  }
+
+  .ftTextContainer {
+    width: 200px;
+    height: 200px; 
+  }
+
+  .ftResultBtn:active {
+    box-shadow: white 0 0 28px; 
+    border: solid white 1px; 
+  } 
+}
+
+@media (max-width: 768px) {
+
+  body {
+    background: url("./assets/images/fortuneteller_bckgd_tablet.webp")
+  }
+}
